@@ -29,9 +29,8 @@ public class ServiceController {
     public List<String> getAllServiceInstances(@PathVariable String serviceName) {
         return discoveryClient.getInstances(serviceName)
                 .stream()
-                .map(s ->
-                        s.getServiceId() + " - " + s.getHost() + ":" + s.getPort()
-                ).collect(Collectors.toList());
+                .map(s -> s.getServiceId() + " - " + s.getHost() + ":" + s.getPort())
+                .distinct()
+                .collect(Collectors.toList());
     }
-
 }
