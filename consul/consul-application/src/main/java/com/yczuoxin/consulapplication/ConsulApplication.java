@@ -1,4 +1,4 @@
-package com.yczuoxin.consulclient;
+package com.yczuoxin.consulapplication;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -8,9 +8,9 @@ import org.springframework.cloud.openfeign.EnableFeignClients;
 @SpringBootApplication
 @EnableDiscoveryClient
 @EnableFeignClients
-public class ConsulClientApplication {
+public class ConsulApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(ConsulClientApplication.class, args);
+        SpringApplication.run(ConsulApplication.class, args);
     }
 }

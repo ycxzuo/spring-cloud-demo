@@ -1,16 +1,16 @@
-package com.yczuoxin.consulclient;
+package com.yczuoxin.springcloud.eurekaapplication;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
+import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 import org.springframework.cloud.openfeign.EnableFeignClients;
 
 @SpringBootApplication
-@EnableDiscoveryClient
 @EnableFeignClients
-public class ConsulClientApplication {
+@EnableEurekaClient
+public class SpringCloudEurekaApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(ConsulClientApplication.class, args);
+        SpringApplication.run(SpringCloudEurekaApplication.class, args);
     }
 }
