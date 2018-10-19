@@ -14,6 +14,7 @@
     <modules>
         <module>spring-cloud-config</module>
         <module>spring-cloud-eureka</module>
+        <module>spring-cloud-nacos</module>
         <module>zookeeper</module>
         <module>consul</module>
     </modules>
