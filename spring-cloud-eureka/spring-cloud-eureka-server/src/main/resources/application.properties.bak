@@ -1,0 +1,11 @@
+
+# eureka server port
+server.port=12345
+
+# 关闭安全监测（Eureka对于经常上下线的服务表示是上线状态，改为false时就会根据监测结果显示）
+eureka.server.enable-self-preservation=false
+
+# 关闭自己注册自己
+eureka.client.register-with-eureka=false
+
+

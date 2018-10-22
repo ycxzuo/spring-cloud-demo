@@ -1,0 +1,20 @@
+# 项目名称
+spring:
+  application:
+    name: eureka-server
+
+# 注册中心端口配置
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+    # 关闭自己注册自己
+    register-with-eureka: false
+  # 关闭安全监测（Eureka对于经常上下线的服务表示是上线状态，改为false时就会根据监测结果显示）
+  server:
+    enable-self-preservation: false
+
+# 服务启动端口
+server:
+  port: 8761
+
