@@ -1,0 +1,19 @@
+# mybatis-plus 配置
+mybatis-plus:
+  configuration:
+    # 输出 sql
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+  # 配置 mapper 的路径
+  mapper-locations: classpath*:/com/yczuoxin/demo/eurekaclient1/mapper/*.xml
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+
+server:
+  port: 8081
+
+spring:
+  application:
+    name: eureka-client
