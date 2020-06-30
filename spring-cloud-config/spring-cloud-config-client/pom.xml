@@ -22,9 +22,7 @@
         </dependency>
         <dependency>
             <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-config-dependencies</artifactId>
-            <version>2.2.3.RELEASE</version>
-            <type>pom</type>
+            <artifactId>spring-cloud-starter-config</artifactId>
         </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
