@@ -9,7 +9,7 @@ import org.springframework.stereotype.Component;
 @Component
 public class TestSmartLifecycle implements SmartLifecycle {
 
-    private boolean isRunning = false;
+    private volatile boolean isRunning = false;
 
     /**
      * 1. 我们主要在该方法中启动任务或者其他异步服务，比如开启MQ接收消息
@@ -18,7 +18,7 @@ public class TestSmartLifecycle implements SmartLifecycle {
      */
     @Override
     public void start() {
-        System.out.println("start");
+        System.out.println("SmartLifecycle is start");
 
         // 执行完其他业务后，可以修改 isRunning = true
         isRunning = true;
@@ -40,7 +40,7 @@ public class TestSmartLifecycle implements SmartLifecycle {
      */
     @Override
     public boolean isAutoStartup() {
-        // 默认为false
+        // 默认为 true
         return true;
     }
 
@@ -59,7 +59,14 @@ public class TestSmartLifecycle implements SmartLifecycle {
      */
     @Override
     public void stop(Runnable callback) {
-        System.out.println("stop(Runnable)");
+        System.out.println("SmartLifecycle is stop(Runnable) ing");
+        callback.run();
+        try {
+            Thread.sleep(10000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+        System.out.println("SmartLifecycle is stop(Runnable)");
 
         // 如果你让isRunning返回true，需要执行stop这个方法，那么就不要忘记调用callback.run()。
         // 否则在你程序退出时，Spring的DefaultLifecycleProcessor会认为你这个TestSmartLifecycle没有stop完成，程序会一直卡着结束不了，等待一定时间（默认超时时间30秒）后才会自动结束。
@@ -80,7 +87,7 @@ public class TestSmartLifecycle implements SmartLifecycle {
      */
     @Override
     public void stop() {
-        System.out.println("stop");
+        System.out.println("SmartLifecycle is stop");
 
         isRunning = false;
     }

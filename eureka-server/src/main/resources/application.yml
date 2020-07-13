@@ -3,10 +3,10 @@ server:
 eureka:
   instance:
     hostname: eureka-server
-    statusPageUrlPath: http://127.0.0.1:8761/eureka/info
-    healthCheckUrlPath: http://127.0.0.1:8761/eureka/health
+#    statusPageUrlPath: http://127.0.0.1:8761/eureka/info
+#    healthCheckUrlPath: http://127.0.0.1:8761/eureka/health
   client:
-    service-url:
-      defaultZone: http://127.0.0.1:8761/eureka
+#    service-url:
+#      defaultZone: http://127.0.0.1:8761/eureka
     register-with-eureka: false
 

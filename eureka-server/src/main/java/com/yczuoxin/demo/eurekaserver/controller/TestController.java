@@ -10,8 +10,7 @@ public class TestController {
     public void close(){
         System.out.println("closing");
         // 测试
-        System.exit(-1);
+        System.exit(0);
     }
-
 
 }
