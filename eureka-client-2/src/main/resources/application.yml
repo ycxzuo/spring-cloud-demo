@@ -17,3 +17,7 @@ server:
 spring:
   application:
     name: eureka-client
+
+logging:
+  level:
+    root: DEBUG

@@ -13,3 +13,6 @@ eureka:
     #要不要去注册中心获取其他服务的地址,单点服务器无需拉取
     fetch-registry: false
 
+logging:
+  level:
+    root: DEBUG
