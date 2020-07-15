@@ -16,6 +16,7 @@ public class UserController {
 
     @GetMapping(value = "/user/{id}")
     public User getUser(@PathVariable Long id) {
+        System.out.println("client1 被调用了");
         userService.findById(id);
         return userService.getById(id);
     }

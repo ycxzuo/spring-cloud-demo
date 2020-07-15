@@ -25,6 +25,7 @@
         <module>eureka-client-1</module>
         <module>eureka-client-2</module>
         <module>spring-cloud-config</module>
+        <module>ribbon-demo</module>
     </modules>
 
     <dependencyManagement>
