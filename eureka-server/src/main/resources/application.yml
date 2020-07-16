@@ -15,7 +15,7 @@ eureka:
 
 logging:
   level:
-    root: DEBUG
+    root: WARN
 
 management:
   endpoints:

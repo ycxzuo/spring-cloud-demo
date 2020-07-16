@@ -10,6 +10,10 @@ spring:
   application:
     name: ribbon-demo
 
+logging:
+  level:
+    root: WARN
+
 
 management:
   endpoints:
