@@ -9,3 +9,11 @@ eureka:
 spring:
   application:
     name: ribbon-demo
+
+
+management:
+  endpoints:
+    web:
+      base-path: /actuator  # 访问根路径
+      exposure:
+        include: "*"

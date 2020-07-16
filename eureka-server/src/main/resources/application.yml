@@ -16,3 +16,10 @@ eureka:
 logging:
   level:
     root: DEBUG
+
+management:
+  endpoints:
+    web:
+      base-path: /actuator  # 访问根路径
+      exposure:
+        include: "*"
