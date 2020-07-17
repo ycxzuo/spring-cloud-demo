@@ -35,11 +35,11 @@ public class TestSmartLifecycle2 implements SmartLifecycle {
     @Override
     public void stop(Runnable callback) {
         System.out.println("SmartLifecycle2 is stop(Runnable) ing");
-        try {
+/*        try {
             Thread.sleep(10000);
         } catch (InterruptedException e) {
             e.printStackTrace();
-        }
+        }*/
         System.out.println("SmartLifecycle2 is stop(Runnable)");
         callback.run();
 

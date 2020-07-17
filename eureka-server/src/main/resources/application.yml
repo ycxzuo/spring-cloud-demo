@@ -6,8 +6,8 @@ eureka:
 #    statusPageUrlPath: http://127.0.0.1:8761/eureka/info
 #    healthCheckUrlPath: http://127.0.0.1:8761/eureka/health
   client:
-#    service-url:
-#      defaultZone: http://127.0.0.1:8761/eureka
+    service-url:
+      defaultZone: http://localhost:8762/eureka/,http://localhost:8763/eureka/
     #自己就是注册中心，不用注册自己
     register-with-eureka: false
     #要不要去注册中心获取其他服务的地址,单点服务器无需拉取
