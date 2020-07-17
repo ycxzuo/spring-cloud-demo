@@ -14,8 +14,6 @@
     <name>eureka-server</name>
     <description>Demo project for Spring Boot</description>
 
-
-
     <dependencies>
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -57,15 +55,4 @@
             </exclusions>
         </dependency>
     </dependencies>
-
-
-    <build>
-        <plugins>
-            <plugin>
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-maven-plugin</artifactId>
-            </plugin>
-        </plugins>
-    </build>
-
 </project>
