@@ -1,0 +1,44 @@
+spring:
+  application:
+    name: api-gateway
+  cloud:
+    gateway:
+      routes:
+        - id: gateway-service
+          uri: https://blog.csdn.net
+          predicates:
+            # 参照 RoutePredicateFactory 接口的实现类
+            - name: Path
+              args:
+                name: /ycxzuoxin
+
+
+#        - id: eureka-client-route
+#          uri: lb://EUREKA-CLIENT
+#          predicates:
+#            - name: Path
+#              args:
+#                name: /eureka-client/**
+#          filters:
+#            - RewritePath=/eureka-client/(?<segment>.*), /$\{segment}
+      discovery:
+        locator:
+          # 全部小写匹配，否则全部大写匹配
+          lowerCaseServiceId: true
+          # 启用基于服务发现的路由定位
+          enabled: true
+
+server:
+  port: 9999
+
+management:
+  endpoints:
+    web:
+      base-path: /actuator  # 访问根路径
+      exposure:
+        include: "*"
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/,http://localhost:8762/eureka/,http://localhost:8763/eureka/
