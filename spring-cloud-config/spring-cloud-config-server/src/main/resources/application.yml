@@ -1,0 +1,18 @@
+spring:
+  cloud:
+    config:
+      server:
+        git:
+          # 配置服务器获取git本地资源地址
+          uri: https://github.com/ycxzuo/configuration.git
+#          username: ***
+#          password: ***
+          search-paths: config
+  # 配置服务器名称
+  application:
+    name: config-server
+
+# 配置服务器的端口
+server:
+  port: 7071
+
