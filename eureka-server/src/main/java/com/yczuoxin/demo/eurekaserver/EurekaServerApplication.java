@@ -17,9 +17,8 @@ public class EurekaServerApplication {
 
     @Bean
     public ApplicationRunner runner(WebServerApplicationContext context) {
-        return args -> {
-            System.out.println("当前 WebServer 实现类为："  + context.getWebServer().getClass().getName());
-        };
+        return args -> System.out.println("当前 WebServer 实现类为："  + context.getWebServer().getClass().getName());
+
     }
 
 }

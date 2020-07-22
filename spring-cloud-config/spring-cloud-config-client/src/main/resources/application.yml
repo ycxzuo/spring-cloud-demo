@@ -1,2 +1,20 @@
 server:
   port: 7072
+
+spring:
+  application:
+    name: config-client
+  kafka:
+    bootstrap-servers: 47.106.80.100:9092
+
+management:
+  endpoints:
+    web:
+      base-path: /actuator  # 访问根路径
+      exposure:
+        include: '*'
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/,http://localhost:8762/eureka/,http://localhost:8763/eureka/

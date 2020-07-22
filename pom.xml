@@ -18,7 +18,6 @@
     <properties>
         <java.version>1.8</java.version>
         <spring-cloud.version>Hoxton.SR5</spring-cloud.version>
-        <spring-boot.version>2.2.8.RELEASE</spring-boot.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <maven.compiler.encoding>UTF-8</maven.compiler.encoding>
@@ -33,6 +32,7 @@
         <module>spring-cloud-config</module>
         <module>ribbon-demo</module>
         <module>gateway-demo</module>
+        <module>spring-cloud-bus</module>
     </modules>
 
     <dependencies>
