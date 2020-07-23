@@ -24,7 +24,7 @@ server:
   port: 7071
 
 management:
-  endpoints:`
+  endpoints:
     web:
       base-path: /actuator  # 访问根路径
       exposure:
