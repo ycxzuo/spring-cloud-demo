@@ -5,8 +5,11 @@ import com.yczuoxin.demo.eurekaclient2.service.ProductServiceBiz;
 import com.yczuoxin.openfeigndemo.model.Product;
 import com.yczuoxin.openfeigndemo.service.ProductService;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RestController;
 
-@Controller
+@RestController
 public class ProductServiceImpl implements ProductService {
 
     private ProductServiceBiz productServiceBiz;
@@ -16,7 +19,7 @@ public class ProductServiceImpl implements ProductService {
     }
 
     @Override
-    public Product getById(Long id) {
+    public Product getById(@PathVariable("id") Long id) {
         ProductEntity productEntity = productServiceBiz.getById(id);
         Product product = new Product();
         product.setId(productEntity.getId());
@@ -26,7 +29,7 @@ public class ProductServiceImpl implements ProductService {
     }
 
     @Override
-    public boolean save(Product product) {
+    public boolean save(@RequestBody Product product) {
         ProductEntity productEntity = new ProductEntity();
         productEntity.setId(product.getId());
         productEntity.setName(product.getName());
