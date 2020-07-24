@@ -42,5 +42,11 @@
             <artifactId>druid</artifactId>
             <version>1.1.9</version>
         </dependency>
+
+        <dependency>
+            <groupId>com.yczuoxin</groupId>
+            <artifactId>openfeign-demo</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+        </dependency>
     </dependencies>
 </project>
