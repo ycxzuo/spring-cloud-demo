@@ -15,17 +15,13 @@ import org.springframework.context.event.EventListener;
 //@SpringBootApplication(scanBasePackages = "com.yczuoxin.config")
 //@Configuration
 //@ComponentScan
-//@EnableAutoConfiguration
+@EnableAutoConfiguration
 public class WebfluxDemo2Application {
 
     public static void main(String[] args) {
-        SpringApplication.run(WebConfiguration.class, args);
+        SpringApplication.run(WebfluxDemo2Application.class, args);
     }
 
-//    @Bean
-//    public ApplicationRunner runner(WebServerApplicationContext context) {
-//        return args -> System.out.println("当前 WebServer 实现类为" + context.getWebServer().getClass().getName());
-//    }
 
     @EventListener(WebServerInitializedEvent.class)
     public void onWebServerReady(WebServerInitializedEvent event) {

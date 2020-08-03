@@ -4,3 +4,10 @@ logging:
     # org.mybatis: debug
     # java.sql: debug
     org.springframework.web: trace
+
+management:
+  endpoints:
+    web:
+      base-path: /actuator  # 访问根路径
+      exposure:
+        include: "*"
