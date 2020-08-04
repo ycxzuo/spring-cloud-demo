@@ -9,3 +9,10 @@ server:
 spring:
   application:
     name: feign-client
+
+feign:
+  compression:
+    request:
+      enabled: true
+    response:
+      enabled: true

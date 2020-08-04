@@ -11,3 +11,6 @@ management:
       base-path: /actuator  # 访问根路径
       exposure:
         include: "*"
+
+server:
+  port: 8071
