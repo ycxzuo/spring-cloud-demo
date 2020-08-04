@@ -10,6 +10,11 @@ spring:
   application:
     name: feign-client
 
+logging:
+  level:
+    root: WARN
+    org.springframework.web: trace
+
 feign:
   compression:
     request:

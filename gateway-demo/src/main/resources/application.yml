@@ -31,6 +31,11 @@ spring:
 server:
   port: 9999
 
+logging:
+  level:
+    root: WARN
+    org.springframework.web: trace
+
 management:
   endpoints:
     web:

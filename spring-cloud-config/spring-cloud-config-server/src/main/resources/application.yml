@@ -30,6 +30,11 @@ management:
       exposure:
         include: "*"
 
+logging:
+  level:
+    root: WARN
+    org.springframework.web: trace
+
 eureka:
   client:
     service-url:

@@ -4,3 +4,8 @@ server:
 spring:
   application:
     name: consul-server
+
+logging:
+  level:
+    root: WARN
+    org.springframework.web: trace

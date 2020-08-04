@@ -3,3 +3,7 @@ server:
 spring:
   application:
     name: zookeeper-server
+logging:
+  level:
+    root: WARN
+    org.springframework.web: trace

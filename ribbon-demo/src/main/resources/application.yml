@@ -13,6 +13,7 @@ spring:
 logging:
   level:
     root: WARN
+    org.springframework.web: trace
 
 
 management:

@@ -3,7 +3,5 @@ server:
 
 logging:
   level:
-    # root: info
-    # org.mybatis: debug
-    # java.sql: debug
+    root: WARN
     org.springframework.web: trace

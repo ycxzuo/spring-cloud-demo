@@ -16,7 +16,7 @@ eureka:
 logging:
   level:
     root: WARN
-
+    org.springframework.web: trace
 management:
   endpoints:
     web:
