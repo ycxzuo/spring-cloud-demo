@@ -6,7 +6,6 @@
         <groupId>com.yczuoxin</groupId>
         <artifactId>spring-cloud-demo</artifactId>
         <version>0.0.1-SNAPSHOT</version>
-        <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <artifactId>openfeign-demo</artifactId>
     <version>0.0.1-SNAPSHOT</version>
