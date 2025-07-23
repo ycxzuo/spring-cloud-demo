@@ -1,13 +1,13 @@
-package com.yczuoxin.hystrixdemo;
+package com.yczuoxin.circuit.breaker.demo;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class HystrixDemoApplication {
+public class CircuitBreakerDemoApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(HystrixDemoApplication.class, args);
+        SpringApplication.run(CircuitBreakerDemoApplication.class, args);
     }
 
 }
