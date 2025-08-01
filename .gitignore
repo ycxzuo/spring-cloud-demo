@@ -24,6 +24,7 @@ mvnw.cmd
 /*/*/mvnw
 /*/*/mvnw.cmd
 /*/*/.mvn/
+spring-shell.log
 
 ### NetBeans ###
 /nbproject/private/

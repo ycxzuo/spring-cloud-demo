@@ -15,6 +15,7 @@ import org.springframework.web.servlet.function.ServerResponse;
 import reactor.core.publisher.Mono;
 
 import java.util.List;
+import java.util.UUID;
 
 
 @RestController
@@ -51,6 +52,11 @@ public class TestController {
                 .filter(p -> p.getInstanceId().equals(instanceId))
                 .findFirst()
                 .orElseThrow(RuntimeException::new);
+    }
+
+    public static void main(String[] args) {
+        String code = UUID.randomUUID().toString().replaceAll("-", "");
+        System.out.println(code);
     }
 
 }
