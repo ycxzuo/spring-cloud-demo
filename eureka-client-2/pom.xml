@@ -9,7 +9,6 @@
     </parent>
     <groupId>com.yczuoxin.demo</groupId>
     <artifactId>eureka-client-2</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
     <name>eureka-client-2</name>
     <description>Demo project for Spring Boot</description>
 
@@ -31,7 +30,7 @@
         <dependency>
             <groupId>com.yczuoxin</groupId>
             <artifactId>openfeign-demo</artifactId>
-            <version>0.0.1-SNAPSHOT</version>
+            <version>${project.version}</version>
         </dependency>
     </dependencies>
 </project>

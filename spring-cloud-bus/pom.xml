@@ -8,7 +8,6 @@
         <version>0.0.1-SNAPSHOT</version>
     </parent>
     <artifactId>spring-cloud-bus</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
     <name>spring-cloud-bus</name>
     <description>Demo project for Spring Boot</description>
     <packaging>pom</packaging>

@@ -9,7 +9,6 @@
     </parent>
     <groupId>com.yczuoxin.demo</groupId>
     <artifactId>eureka-server</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
     <name>eureka-server</name>
     <description>Demo project for Spring Boot</description>
 

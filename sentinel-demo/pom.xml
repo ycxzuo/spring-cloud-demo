@@ -7,9 +7,7 @@
         <artifactId>spring-cloud-demo</artifactId>
         <version>0.0.1-SNAPSHOT</version>
     </parent>
-    <groupId>com.yczuoxin</groupId>
     <artifactId>sentinel-demo</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
     <name>sentinel-demo</name>
     <description>Demo project for Spring Boot</description>
 
@@ -32,7 +30,6 @@
         <dependency>
             <groupId>com.alibaba.cloud</groupId>
             <artifactId>spring-cloud-starter-alibaba-sentinel</artifactId>
-            <version>2023.0.3.3</version>
         </dependency>
     </dependencies>
 

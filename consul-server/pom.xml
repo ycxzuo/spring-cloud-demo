@@ -9,7 +9,6 @@
     </parent>
 
     <artifactId>consul-server</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
     <name>consul-server</name>
     <description>Demo project for Spring Boot</description>
 

@@ -9,7 +9,6 @@
     </parent>
 
     <artifactId>gateway-demo</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
     <name>gateway-demo</name>
     <description>Demo project for Spring Boot</description>
 

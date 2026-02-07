@@ -8,7 +8,6 @@
         <version>0.0.1-SNAPSHOT</version>
     </parent>
     <artifactId>eureka-client-1</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
     <name>eureka-client-1</name>
     <description>Demo project for Spring Boot</description>
 
@@ -31,7 +30,7 @@
         <dependency>
             <groupId>com.yczuoxin</groupId>
             <artifactId>openfeign-demo</artifactId>
-            <version>0.0.1-SNAPSHOT</version>
+            <version>${project.version}</version>
         </dependency>
     </dependencies>
 

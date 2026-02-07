@@ -9,7 +9,6 @@
     </parent>
 
     <artifactId>eureka-server-3</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
     <name>eureka-server-3</name>
     <description>Demo project for Spring Boot</description>
 
