@@ -6,7 +6,7 @@
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>4.0.2</version>
+        <version>3.5.11</version>
     </parent>
     <groupId>com.yczuoxin</groupId>
     <artifactId>spring-cloud-demo</artifactId>
@@ -16,8 +16,9 @@
 
     <properties>
         <java.version>17</java.version>
-        <spring-cloud.version>2025.1.1</spring-cloud.version>
-        <spring-cloud-alibaba.version>2023.0.3.3</spring-cloud-alibaba.version>
+        <spring-cloud.version>2025.0.1</spring-cloud.version>
+        <spring-cloud-alibaba.version>2021.0.4.0</spring-cloud-alibaba.version>
+        <spring-ai.version>1.0.0-M6</spring-ai.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <maven.compiler.encoding>UTF-8</maven.compiler.encoding>
@@ -40,6 +41,7 @@
         <module>consul-server</module>
         <module>zookeeper-server</module>
         <module>web-context</module>
+        <module>spring-ai-demo</module>
     </modules>
 
     <dependencies>
@@ -76,7 +78,13 @@
             </exclusions>
         </dependency>
 
-
+<!--        <dependency>-->
+<!--            <groupId>org.springframework.ai</groupId>-->
+<!--            <artifactId>spring-ai-bom</artifactId>-->
+<!--            <version>1.0.0-M6</version>-->
+<!--            <type>pom</type>-->
+<!--            <scope>import</scope>-->
+<!--        </dependency>-->
 <!--        <dependency>-->
 <!--            <groupId>com.alibaba.cloud</groupId>-->
 <!--            <artifactId>spring-cloud-starter-dubbo</artifactId>-->
@@ -97,6 +105,13 @@
                 <groupId>com.alibaba.cloud</groupId>
                 <artifactId>spring-cloud-alibaba-dependencies</artifactId>
                 <version>${spring-cloud-alibaba.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework.ai</groupId>
+                <artifactId>spring-ai-bom</artifactId>
+                <version>${spring-ai.version}</version>
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>

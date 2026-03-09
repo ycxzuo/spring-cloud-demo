@@ -8,19 +8,24 @@
         <version>0.0.1-SNAPSHOT</version>
     </parent>
 
-    <artifactId>gateway-demo</artifactId>
-    <name>gateway-demo</name>
+    <artifactId>eureka-server-3</artifactId>
+    <name>eureka-server-3</name>
     <description>Demo project for Spring Boot</description>
-
 
     <dependencies>
         <dependency>
-            <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-gateway-server-webflux</artifactId>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+            <exclusions>
+                <exclusion>
+                    <groupId>org.springframework.boot</groupId>
+                    <artifactId>spring-boot-starter-logging</artifactId>
+                </exclusion>
+            </exclusions>
         </dependency>
         <dependency>
             <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
+            <artifactId>spring-cloud-starter-netflix-eureka-server</artifactId>
         </dependency>
     </dependencies>
 </project>
