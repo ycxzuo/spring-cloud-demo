@@ -1,7 +1,6 @@
 package com.yczuoxin.webfluxdemo1.configuration;
 
 import com.yczuoxin.webfluxdemo1.handler.TimeHandler;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.reactive.function.server.*;
@@ -12,8 +11,11 @@ import static org.springframework.web.reactive.function.server.RouterFunctions.r
 @Configuration
 public class RouteConfiguration {
 
-    @Autowired
-    public TimeHandler timeHandler;
+    private final TimeHandler timeHandler;
+
+    public RouteConfiguration(TimeHandler timeHandler) {
+        this.timeHandler = timeHandler;
+    }
 
     @Bean
     public RouterFunction<ServerResponse> timeRouter() {

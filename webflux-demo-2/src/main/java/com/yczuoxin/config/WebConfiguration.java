@@ -1,8 +1,7 @@
 package com.yczuoxin.config;
 
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.boot.ApplicationRunner;
-import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
-import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.web.context.WebServerApplicationContext;
 import org.springframework.boot.web.context.WebServerInitializedEvent;
 import org.springframework.context.annotation.Bean;
@@ -17,9 +16,8 @@ import static org.springframework.web.reactive.function.server.RouterFunctions.r
 import static org.springframework.web.reactive.function.server.ServerResponse.ok;
 
 
+@Slf4j
 @Configuration
-//@SpringBootApplication
-//@EnableAutoConfiguration
 public class WebConfiguration {
 
     @Bean
@@ -29,14 +27,14 @@ public class WebConfiguration {
 
     @EventListener(WebServerInitializedEvent.class)
     public void onWebServerReady(WebServerInitializedEvent event) {
-        System.out.println("WebConfiguration: 当前 WebServer 实现类为" + event.getWebServer().getClass().getName());
+        log.info("WebConfiguration: 当前 WebServer 实现类为 {}", event.getWebServer().getClass().getName());
     }
 
     @Bean
     public ApplicationRunner runner(WebServerApplicationContext context) {
         return args -> {
-            System.out.println("当前 HelloWorld Bean 实现类为" + context.getBean("helloWorld").getClass().getName());
-            System.out.println("当前 WebConfiguration Bean 实现类为" + context.getBean(WebConfiguration.class).getClass().getName());
+            log.info("当前 HelloWorld Bean 实现类为 {}", context.getBean("helloWorld").getClass().getName());
+            log.info("当前 WebConfiguration Bean 实现类为 {}", context.getBean(WebConfiguration.class).getClass().getName());
         };
     }
 

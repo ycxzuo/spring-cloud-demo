@@ -3,5 +3,9 @@ spring:
     url: jdbc:mysql://47.106.80.100:3306/primary?characterEncoding=utf8&useSSL=false&serverTimezone=GMT%2B8&rewriteBatchedStatements=true
     driver-class-name: com.mysql.cj.jdbc.Driver
     username: root
-    password: root
+    password: ${DB_PASSWORD:root}
     type: com.alibaba.druid.pool.DruidDataSource
+    druid:
+      initial-size: 5
+      min-idle: 5
+      max-active: 20

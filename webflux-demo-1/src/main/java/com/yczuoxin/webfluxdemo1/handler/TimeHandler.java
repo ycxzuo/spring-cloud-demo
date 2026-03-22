@@ -25,7 +25,7 @@ public class TimeHandler {
     public Mono<ServerResponse> getDate(ServerRequest request) {
         return ok()
                 .contentType(MediaType.TEXT_PLAIN)
-                .body(Mono.just("Date is " + new SimpleDateFormat("YYYY-MM-dd").format(new Date())), String.class);
+                .body(Mono.just("Date is " + new SimpleDateFormat("yyyy-MM-dd").format(new Date())), String.class);
     }
 
     public Mono<ServerResponse> getTimePerSecond(ServerRequest request) {

@@ -10,9 +10,12 @@ spring:
 management:
   endpoints:
     web:
-      base-path: /actuator  # 访问根路径
+      base-path: /actuator
       exposure:
-        include: '*'
+        include: health,info,metrics
+  endpoint:
+    shutdown:
+      enabled: false
 
 logging:
   level:

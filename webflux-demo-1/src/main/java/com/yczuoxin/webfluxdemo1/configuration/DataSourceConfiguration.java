@@ -15,9 +15,8 @@ public class DataSourceConfiguration {
                 .host("47.106.127.193")
                 .port(3306)
                 .username("root")
-                .password("root")
+                .password(System.getenv().getOrDefault("DB_PASSWORD", "root"))
                 .database("user")
-                // 额外的其它非必选参数省略
                 .build());
     }
 

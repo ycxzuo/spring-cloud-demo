@@ -1,5 +1,6 @@
 package com.yczuoxin.demo.eurekaserver.controller;
 
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cloud.client.ServiceInstance;
 import org.springframework.cloud.client.discovery.DiscoveryClient;
@@ -15,20 +16,16 @@ import org.springframework.web.servlet.function.ServerResponse;
 import reactor.core.publisher.Mono;
 
 import java.util.List;
-import java.util.UUID;
 
 
+@Slf4j
 @RestController
 public class TestController {
 
-    @Autowired
-    private DiscoveryClient discoveryClient;
+    private final DiscoveryClient discoveryClient;
 
-    @GetMapping("/close")
-    public void close(){
-        System.out.println("closing");
-        // 测试
-        System.exit(-1);
+    public TestController(DiscoveryClient discoveryClient) {
+        this.discoveryClient = discoveryClient;
     }
 
     @Bean
@@ -51,12 +48,14 @@ public class TestController {
         return discoveryClient.getInstances(serviceName).stream()
                 .filter(p -> p.getInstanceId().equals(instanceId))
                 .findFirst()
-                .orElseThrow(RuntimeException::new);
+                .orElseThrow(() -> new ServiceInstanceNotFoundException(
+                        "Service instance not found: " + serviceName + "/" + instanceId));
     }
 
-    public static void main(String[] args) {
-        String code = UUID.randomUUID().toString().replaceAll("-", "");
-        System.out.println(code);
+    static class ServiceInstanceNotFoundException extends RuntimeException {
+        public ServiceInstanceNotFoundException(String message) {
+            super(message);
+        }
     }
 
 }

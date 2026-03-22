@@ -1,31 +1,22 @@
 package com.yczuoxin.webfluxdemo2;
 
-import com.yczuoxin.config.WebConfiguration;
-import org.springframework.boot.ApplicationRunner;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.boot.SpringApplication;
-import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.boot.web.context.WebServerApplicationContext;
 import org.springframework.boot.web.context.WebServerInitializedEvent;
-import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.ComponentScan;
-import org.springframework.context.annotation.Configuration;
 import org.springframework.context.event.EventListener;
 
-//@SpringBootApplication(scanBasePackages = "com.yczuoxin.config")
-//@Configuration
-//@ComponentScan
-@EnableAutoConfiguration
+@Slf4j
+@SpringBootApplication(scanBasePackages = "com.yczuoxin.config")
 public class WebfluxDemo2Application {
 
     public static void main(String[] args) {
         SpringApplication.run(WebfluxDemo2Application.class, args);
     }
 
-
     @EventListener(WebServerInitializedEvent.class)
     public void onWebServerReady(WebServerInitializedEvent event) {
-        System.out.println("WebfluxDemo2Application: 当前 WebServer 实现类为" + event.getWebServer().getClass().getName());
+        log.info("当前 WebServer 实现类为 {}", event.getWebServer().getClass().getName());
     }
 
 }
